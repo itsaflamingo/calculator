@@ -26,16 +26,6 @@ subtract.addEventListener('click', (e) => operate(e));
 multiply.addEventListener('click', (e) => operate(e));
 divide.addEventListener('click', (e) => operate(e));
 
-// keyboard 
-numbers.forEach((number) => number.addEventListener('keyup', (e) => numClick(e)));
-clear.addEventListener('keyup', () => clearScreen());
-allClear.addEventListener('keyup', (e) => clearMemory(e));
-equals.addEventListener('keyup', (e) => operate(e));
-add.addEventListener('keyup', (e) => operate(e));
-subtract.addEventListener('keyup', (e) => operate(e));
-multiply.addEventListener('keyup', (e) => operate(e));
-divide.addEventListener('keyup', (e) => operate(e));
-
 //variables
 let tempVar = '';
 let numberArray = []; //create array of unknown size.
@@ -47,19 +37,28 @@ let op;
 let isPressed;
 
 function numClick (e) {
-    if (e.target.className == 'number') {
-
-        tempVar += e.target.id; //converts string to int 
-        bottomScreen.innerText = tempVar; 
-        
-        numberArray[i] = tempVar;
-        numberArray[i] = numberArray.slice(i).join('');  
-        numberArray[i] = parseFloat(numberArray[i]);
-
-
-    }
+    tempVar += e.target.id;  
+    bottomScreen.innerText = tempVar;         
+    numberArray[i] = tempVar;
+    numberArray[i] = numberArray.slice(i).join('');  
+    numberArray[i] = parseFloat(numberArray[i]);
     
 }
+//keyboard 
+window.addEventListener("keydown", e => {
+    if(isNaN(e.key)) { //if e.key is not a number. 
+        return;   
+    }
+    else {
+        console.log(e.key);
+        tempVar += e.key;  
+        bottomScreen.innerText = tempVar; 
+            
+        numberArray[i] = tempVar;
+        numberArray[i] = numberArray.slice(i).join('');  
+        numberArray[i] = parseFloat(numberArray[i]); 
+    }
+})
 
 function operate(e) {
   op = e.target.id;
