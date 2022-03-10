@@ -16,7 +16,5 @@ What I learned:
 - Read instructions more clearly:')
 
 Have a couple of things to do: 
-1. Add keyboard funcitonality (started underneath keyboard section)
-2. Change button colour when clicked
-3. Fix AC, as you currently can't add input after it is clicked. 
+1. Change button colour when clicked
 
