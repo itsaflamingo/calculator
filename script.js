@@ -48,10 +48,7 @@ let isPressed;
 
 function numClick (e) {
     if (e.target.className == 'number') {
-        
-        // e.target.classList.add('pressed');
-        // console.log(e.propertyName);
-    
+
         tempVar += e.target.id; //converts string to int 
         bottomScreen.innerText = tempVar; 
         
@@ -59,15 +56,10 @@ function numClick (e) {
         numberArray[i] = numberArray.slice(i).join('');  
         numberArray[i] = parseFloat(numberArray[i]);
 
+
     }
     
 }
-
-// function removeTransition(e) {
-//     if (e.propertyName !== 'transform') return;
-//     e.target.classList.remove('pressed');
-// }
-
 
 function operate(e) {
   op = e.target.id;
@@ -188,15 +180,16 @@ function divideArr () {
 }
 
 function clearScreen() {
-    return screen.innerText = '';
+    numberArray.splice(0, i+1);
+    bottomScreen.innerText = numberArray;
 }
 
 function clearMemory() {
-    screen.innerText = '';
+    numberArray.splice(0, i+1);
+    bottomScreen.innerText = numberArray;
     i = 0;
     j = -1;
     tempVar = '';
-    return numberArray = [];
 }
 
 
