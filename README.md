@@ -2,7 +2,7 @@
 Final foundations project for The Odin Project. 
 
 In this project, I practiced: 
-- using tools like: reduce, forEach, switch statement, slice, join, functions, DOM selectors & methods
+- using tools like: reduce, forEach, switch statement, slice, join, functions, DOM selectors & methods, parseFloat 
 - Adding and removing elements from array
 - Debugging with DOM
 
@@ -13,6 +13,5 @@ Difficulties:
 Have a couple of things to do: 
 1. Add keyboard funcitonality (started underneath keyboard section)
 2. Change button colour when clicked
-3. Add decimal capability
-4. Fix AC, as you currently can't add input after it is clicked. 
+3. Fix AC, as you currently can't add input after it is clicked. 
 

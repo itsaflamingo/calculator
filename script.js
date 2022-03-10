@@ -6,6 +6,7 @@ const equals = document.getElementById('equals');
 let screen = document.getElementById('screen');
 let bottomScreen = document.querySelector('.bottomScreen');
 let topScreen = document.querySelector('.topScreen');
+const fullStop = document.querySelector('#fullStop');
 
 const add = document.getElementById('add');
 const subtract = document.getElementById('subtract');
@@ -56,8 +57,8 @@ function numClick (e) {
         
         numberArray[i] = tempVar;
         numberArray[i] = numberArray.slice(i).join('');  
-        numberArray[i] = parseInt(numberArray[i]);
-        
+        numberArray[i] = parseFloat(numberArray[i]);
+
     }
     
 }
